@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lolrange</title>
+    <style>
+        .bigsection{
+            display: inline-block;
+            vertical-align: top;
+            width: 33%;
+        }
+        .inputbox{
+            width: 50.5%;
+        }
+        .compare{
+            width: 52%;
+        }
+        .description{
+            width: 60%;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bigsection">
+        <h1>Champion Information</h1>
+        <p class = "description">Search for a singular champion. Obtain all the information of the ranges and target ranges as well as their innate autoattack range.</p>
+        <form method="POST" action="/get_champion_info">
+            <input class = "inputbox" type="text" id="champion_name" name="champion_name" placeholder="Champion Name" required>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+    <div class = "bigsection">
+        <h1>Champ Comparison</h1>
+        <p class = "description">Compare two champions. Obtain all of the same information as the singular champion serach.</p>
+        <form method="POST" action="/process_combined_form">
+
+            <input class = "inputbox" type="text" id="field1" name="champ1" placeholder = "Champion 1" required><br>
+            <input class = "inputbox" type="text" id="field2" name="champ2" placeholder = "Champion 2" required><br>
+
+            <input class = "compare" type="submit" value="Compare">
+        </form>
+    </div>
+    
+    <div class="bigsection">
+        <h1>Summoner Information</h1>
+        <p class = "description">Search for a summoner that is currently ingame. Returns the list of all the champions and their autoattack range, as well as the range and target range for every ability.</p>
+        <div class = "description">
+            <p style="text-align: center;">!! This takes quite a while to complete !!</p>
+        </div>
+        <form method="POST" action="/get_summoner_info">
+            <input class = "inputbox" placeholder = "Search by name" type="text" id="summoner_name" name="summoner_name" required>
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    
+
+    
+</body>
+
+</html>

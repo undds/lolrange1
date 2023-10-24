@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Champion Info Result</title>
+    <style>
+        .champ1,
+        .champ2 {
+            width: 49%;
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class = "champ1">
+        <h1>Champion Information</h1>
+        <p>Summoner Name: {{ champ1.name }}</p>
+        <p>Auto Range: {{ champ1.aarange }}</p>
+        
+        <h2>Champion Abilities</h2>
+        <p><strong>Q Ability:</strong></p>
+        <p>Range: {{ champ1.q.range }}</p>
+        <p>Target Range: {{ champ1.q.targetranges }}</p>
+        
+        <p><strong>W Ability:</strong></p>
+        <p>Range: {{ champ1.w.range }}</p>
+        <p>Target Range: {{ champ1.w.targetranges }}</p>
+        
+        <p><strong>E Ability:</strong></p>
+        <p>Range: {{ champ1.e.range }}</p>
+        <p>Target Range: {{ champ1.e.targetranges }}</p>
+        
+        <p><strong>R Ability:</strong></p>
+        <p>Range: {{ champ1.r.range }}</p>
+        <p>Target Range: {{ champ1.r.targetranges }}</p>
+    </div>
+    
+    <div class = "champ2">
+        <h1>Champion Information</h1>
+        <p>Summoner Name: {{ champ2.name }}</p>
+        <p>Auto Range: {{ champ2.aarange }}</p>
+
+        <h2>Champion Abilities</h2>
+        <p><strong>Q Ability:</strong></p>
+        <p>Range: {{ champ2.q.range }}</p>
+        <p>Target Range: {{ champ2.q.targetranges }}</p>
+
+        <p><strong>W Ability:</strong></p>
+        <p>Range: {{ champ2.w.range }}</p>
+        <p>Target Range: {{ champ2.w.targetranges }}</p>
+
+        <p><strong>E Ability:</strong></p>
+        <p>Range: {{ champ2.e.range }}</p>
+        <p>Target Range: {{ champ2.e.targetranges }}</p>
+
+        <p><strong>R Ability:</strong></p>
+        <p>Range: {{ champ2.r.range }}</p>
+        <p>Target Range: {{ champ2.r.targetranges }}</p>
+    </div>
+
+</body>
+
+</html>
