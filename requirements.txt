@@ -3,3 +3,4 @@ flask
 requests
 riotwatcher
 templates
+gunicorn
