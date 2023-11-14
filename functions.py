@@ -182,9 +182,10 @@ def callWiki(name):
 
 
 def ingame(name):
+    import os
     from riotwatcher import LolWatcher, ApiError
 
-    key = "<key>"
+    key = os.getenv(apikey)
     # API KEY DO NOT PUBLISH API KEY DO NOT PUBLISH API KEY DO NOT PUBLISH
     lol_watcher = LolWatcher(key)
 
