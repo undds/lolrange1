@@ -1,5 +1,5 @@
 # Introduction
-  A webapp using beautifulsoup4 to display the range of a champion's abilities. It helps determine the spacing to play certain matchups. For example, is Kennen's auto attack range longer or shorter than Darius's E?
+  A webapp using beautifulsoup4 to display the range of a champion's abilities. It helps determine the spacing to play certain matchups. For example, is Aatrox's q longer range than Ashe AA?
 
 
 ## Resources
