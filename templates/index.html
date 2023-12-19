@@ -4,18 +4,21 @@
 <head>
     <title>Lolrange</title>
     <style>
-        .bigsection{
+        .bigsection {
             display: inline-block;
             vertical-align: top;
             width: 33%;
         }
-        .inputbox{
+
+        .inputbox {
             width: 50.5%;
         }
-        .compare{
+
+        .compare {
             width: 52%;
         }
-        .description{
+
+        .description {
             width: 60%;
             text-align: justify;
         }
@@ -26,39 +29,77 @@
 
     <div class="bigsection">
         <h1>Champion Information</h1>
-        <p class = "description">Search for a singular champion. Obtain all the information of the ranges and target ranges as well as their innate autoattack range.</p>
+        <p class="description">Search for a singular champion. Obtain all the information of the ranges and target
+            ranges as well as their innate autoattack range.</p>
         <form method="POST" action="/get_champion_info">
-            <input class = "inputbox" type="text" id="champion_name" name="champion_name" placeholder="Champion Name" required>
+            <input class="inputbox" type="text" id="champion_name" name="champion_name" placeholder="Champion Name"
+                required>
             <input type="submit" value="Submit">
         </form>
     </div>
-    
-    <div class = "bigsection">
+
+    <div class="bigsection">
         <h1>Champ Comparison</h1>
-        <p class = "description">Compare two champions. Obtain all of the same information as the singular champion serach.</p>
+        <p class="description">Compare two champions. Obtain all of the same information as the singular champion
+            serach.</p>
         <form method="POST" action="/process_combined_form">
 
-            <input class = "inputbox" type="text" id="field1" name="champ1" placeholder = "Champion 1" required><br>
-            <input class = "inputbox" type="text" id="field2" name="champ2" placeholder = "Champion 2" required><br>
+            <input class="inputbox" type="text" id="field1" name="champ1" placeholder="Champion 1" required><br>
+            <input class="inputbox" type="text" id="field2" name="champ2" placeholder="Champion 2" required><br>
 
-            <input class = "compare" type="submit" value="Compare">
+            <input class="compare" type="submit" value="Compare">
         </form>
     </div>
-    
+
     <div class="bigsection">
         <h1>Summoner Information</h1>
-        <p class = "description">Search for a summoner that is currently ingame. Returns the list of all the champions and their autoattack range, as well as the range and target range for every ability.</p>
-        <div class = "description">
+        <p class="description">Search for a summoner that is currently ingame. Returns the list of all the champions and
+            their autoattack range, as well as the range and target range for every ability.</p>
+        <div class="description">
             <p style="text-align: center;">!! This takes quite a while to complete !!</p>
         </div>
         <form method="POST" action="/get_summoner_info">
-            <input class = "inputbox" placeholder = "Search by name" type="text" id="summoner_name" name="summoner_name" required>
+            <input class="inputbox" placeholder="Search by name" type="text" id="summoner_name" name="summoner_name"
+                required>
             <input type="submit" value="Search">
         </form>
     </div>
-    
 
+
+    <p style="margin-top: 225px;"></p>
+    <hr/>
     
+    <p><strong>FAQ:</strong></p>
+    <div style="display: flex;flex-direction: row;">
+        <div style="flex: 1;">
+            <p>Q: Why does this look kinda terrible?</p>
+            <p>A: Assuming that you are using this website for its purpose, the main value of the project is retreival of
+                information. There is no need to present it in a presentable manner since usually you are comparing two
+                champions
+                during discussions such as VOD review or you were thinking of a matchup and wanted to quickly just glance at
+                range
+                comparisons. (bro im lazy ok?)</p>
+            <p>Q: Why is there range, target range, effect radius, and collision radius for every spell?? What do those even
+                mean??
+            </p>
+            <p>A: Since this project is parsing through the wiki (leagueoflegends.fandom.com) to obtain the information
+                instead of
+                asking Data Dragon, we must use the values given by the wiki. For each ability in the wiki, there are 4
+                different
+                parameters that indicate range. Range, target range, effect radius, and collision radius. You can usually
+                just think
+                of them as interchangable.</p>
+        </div>
+
+
+        <div style="flex: 1; margin-left: 30px;">
+            <p>Q: Why parse the wiki when you can just call Data Dragon?</p>
+            <p>A: This is what returns when asking for Aatrox's Q information from Data Dragon:</p>
+            <img src="ss.png">
+
+        </div>
+    </div>
+
 </body>
 
 </html>

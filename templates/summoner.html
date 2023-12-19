@@ -2,27 +2,23 @@
 <html>
 
 <head>
-    <title>Ingame Query Results</title>
+    <title>Champion Info Result</title>
     <style>
         .champ{
-            width: 9.5%;
+            width: 10%;
             display: inline-block;
             vertical-align: top;
-        }
-        .name{
-            font-size: 20px;
-            word-wrap: break-word;
         }
     </style>
 </head>
 
 <body>
     <div class = "champ">
-        
-        <h2 class = "name">{{ champList[0].name }}</h2>
+        <h1>Champion Information</h1>
+        <p>Champ Name: {{ champList[0].name }}</p>
         <p>Auto Range: {{ champList[0].aarange }}</p>
         
-        <p>--------</p>
+        <h2>Champion Abilities</h2>
         <p><strong>Q Ability:</strong></p>
         <p>Range: {{ champList[0].q.range }}</p>
         <p>Target Range: {{ champList[0].q.targetranges }}</p>
@@ -41,10 +37,11 @@
     </div>
 
     <div class="champ">
-        <h2 class = "name">{{ champList[1].name }}</h2>
+        <h1>Champion Information</h1>
+        <p>Champ Name: {{ champList[1].name }}</p>
         <p>Auto Range: {{ champList[1].aarange }}</p>
     
-        <p>--------</p>
+        <h2>Champion Abilities</h2>
         <p><strong>Q Ability:</strong></p>
         <p>Range: {{ champList[1].q.range }}</p>
         <p>Target Range: {{ champList[1].q.targetranges }}</p>
@@ -63,10 +60,11 @@
     </div>
 
     <div class="champ">
-        <h2 class = "name">{{ champList[2].name }}</h2>
+        <h1>Champion Information</h1>
+        <p>Champ Name: {{ champList[2].name }}</p>
         <p>Auto Range: {{ champList[2].aarange }}</p>
     
-        <p>--------</p>
+        <h2>Champion Abilities</h2>
         <p><strong>Q Ability:</strong></p>
         <p>Range: {{ champList[2].q.range }}</p>
         <p>Target Range: {{ champList[2].q.targetranges }}</p>
@@ -85,10 +83,11 @@
     </div>
 
     <div class = "champ">
-        <h2 class = "name">{{ champList[3].name }}</h2>
+        <h1>Champion Information</h1>
+        <p>Champ Name: {{ champList[3].name }}</p>
         <p>Auto Range: {{ champList[3].aarange }}</p>
         
-        <p>--------</p>
+        <h2>Champion Abilities</h2>
         <p><strong>Q Ability:</strong></p>
         <p>Range: {{ champList[3].q.range }}</p>
         <p>Target Range: {{ champList[3].q.targetranges }}</p>
@@ -104,133 +103,6 @@
         <p><strong>R Ability:</strong></p>
         <p>Range: {{ champList[3].r.range }}</p>
         <p>Target Range: {{ champList[3].r.targetranges }}</p>
-    </div>
-
-    <div class="champ">
-        <h2 class = "name">{{ champList[4].name }}</h2>
-        <p>Auto Range: {{ champList[4].aarange }}</p>
-    
-        <p>--------</p>
-        <p><strong>Q Ability:</strong></p>
-        <p>Range: {{ champList[4].q.range }}</p>
-        <p>Target Range: {{ champList[4].q.targetranges }}</p>
-    
-        <p><strong>W Ability:</strong></p>
-        <p>Range: {{ champList[4].w.range }}</p>
-        <p>Target Range: {{ champList[4].w.targetranges }}</p>
-    
-        <p><strong>E Ability:</strong></p>
-        <p>Range: {{ champList[4].e.range }}</p>
-        <p>Target Range: {{ champList[4].e.targetranges }}</p>
-    
-        <p><strong>R Ability:</strong></p>
-        <p>Range: {{ champList[4].r.range }}</p>
-        <p>Target Range: {{ champList[4].r.targetranges }}</p>
-    </div>
-    <div class="champ">
-        <h2 class = "name">{{ champList[5].name }}</h2>
-        <p>Auto Range: {{ champList[5].aarange }}</p>
-    
-        <p>--------</p>
-        <p><strong>Q Ability:</strong></p>
-        <p>Range: {{ champList[5].q.range }}</p>
-        <p>Target Range: {{ champList[5].q.targetranges }}</p>
-    
-        <p><strong>W Ability:</strong></p>
-        <p>Range: {{ champList[5].w.range }}</p>
-        <p>Target Range: {{ champList[5].w.targetranges }}</p>
-    
-        <p><strong>E Ability:</strong></p>
-        <p>Range: {{ champList[5].e.range }}</p>
-        <p>Target Range: {{ champList[5].e.targetranges }}</p>
-    
-        <p><strong>R Ability:</strong></p>
-        <p>Range: {{ champList[5].r.range }}</p>
-        <p>Target Range: {{ champList[5].r.targetranges }}</p>
-    </div>
-    <div class="champ">
-        <h2 class = "name">{{ champList[6].name }}</h2>
-        <p>Auto Range: {{ champList[6].aarange }}</p>
-    
-        <p>--------</p>
-        <p><strong>Q Ability:</strong></p>
-        <p>Range: {{ champList[6].q.range }}</p>
-        <p>Target Range: {{ champList[6].q.targetranges }}</p>
-    
-        <p><strong>W Ability:</strong></p>
-        <p>Range: {{ champList[6].w.range }}</p>
-        <p>Target Range: {{ champList[6].w.targetranges }}</p>
-    
-        <p><strong>E Ability:</strong></p>
-        <p>Range: {{ champList[6].e.range }}</p>
-        <p>Target Range: {{ champList[6].e.targetranges }}</p>
-    
-        <p><strong>R Ability:</strong></p>
-        <p>Range: {{ champList[6].r.range }}</p>
-        <p>Target Range: {{ champList[6].r.targetranges }}</p>
-    </div>
-    <div class="champ">
-        <h2 class = "name">{{ champList[7].name }}</h2>
-        <p>Auto Range: {{ champList[7].aarange }}</p>
-    
-        <p>--------</p>
-        <p><strong>Q Ability:</strong></p>
-        <p>Range: {{ champList[7].q.range }}</p>
-        <p>Target Range: {{ champList[7].q.targetranges }}</p>
-    
-        <p><strong>W Ability:</strong></p>
-        <p>Range: {{ champList[7].w.range }}</p>
-        <p>Target Range: {{ champList[7].w.targetranges }}</p>
-    
-        <p><strong>E Ability:</strong></p>
-        <p>Range: {{ champList[7].e.range }}</p>
-        <p>Target Range: {{ champList[7].e.targetranges }}</p>
-    
-        <p><strong>R Ability:</strong></p>
-        <p>Range: {{ champList[7].r.range }}</p>
-        <p>Target Range: {{ champList[7].r.targetranges }}</p>
-    </div>
-    <div class="champ">
-        <h2 class = "name">{{ champList[8].name }}</h2>
-        <p>Auto Range: {{ champList[8].aarange }}</p>
-    
-        <p>--------</p>
-        <p><strong>Q Ability:</strong></p>
-        <p>Range: {{ champList[8].q.range }}</p>
-        <p>Target Range: {{ champList[8].q.targetranges }}</p>
-    
-        <p><strong>W Ability:</strong></p>
-        <p>Range: {{ champList[8].w.range }}</p>
-        <p>Target Range: {{ champList[8].w.targetranges }}</p>
-    
-        <p><strong>E Ability:</strong></p>
-        <p>Range: {{ champList[8].e.range }}</p>
-        <p>Target Range: {{ champList[8].e.targetranges }}</p>
-    
-        <p><strong>R Ability:</strong></p>
-        <p>Range: {{ champList[8].r.range }}</p>
-        <p>Target Range: {{ champList[8].r.targetranges }}</p>
-    </div>
-    <div class="champ">
-        <h2 class = "name">{{ champList[9].name }}</h2>
-        <p>Auto Range: {{ champList[9].aarange }}</p>
-    
-        <p>--------</p>
-        <p><strong>Q Ability:</strong></p>
-        <p>Range: {{ champList[9].q.range }}</p>
-        <p>Target Range: {{ champList[9].q.targetranges }}</p>
-    
-        <p><strong>W Ability:</strong></p>
-        <p>Range: {{ champList[9].w.range }}</p>
-        <p>Target Range: {{ champList[9].w.targetranges }}</p>
-    
-        <p><strong>E Ability:</strong></p>
-        <p>Range: {{ champList[9].e.range }}</p>
-        <p>Target Range: {{ champList[9].e.targetranges }}</p>
-    
-        <p><strong>R Ability:</strong></p>
-        <p>Range: {{ champList[9].r.range }}</p>
-        <p>Target Range: {{ champList[9].r.targetranges }}</p>
     </div>
 </body>
 
