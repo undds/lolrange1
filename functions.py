@@ -2,6 +2,8 @@ class ability:
     def __init__(self):
         self.range = 0
         self.targetranges = 0
+        self.effectrad = 0
+        self.colrad = 0
 
 
 class champ:
@@ -120,6 +122,26 @@ def callWiki(name):
     for element in elements:
         test = element.text.splitlines()
         champion.q.targetranges = test[2]
+
+    # effect radius
+    elements = qAbilitySection.find_all(
+        class_="pi-item pi-data pi-item-spacing pi-border-color",
+        attrs={"data-source": "effect radius"},
+    )
+    for element in elements:
+        test = element.text.splitlines()
+        champion.q.effectrad = test[2]
+
+    # collision radius
+    elements = qAbilitySection.find_all(
+        class_="pi-item pi-data pi-item-spacing pi-border-color",
+        attrs={"data-source": "collision radius"},
+    )
+    for element in elements:
+        test = element.text.splitlines()
+        champion.q.colrad = test[2]
+
+    
     # for w ability
     wAbilitySection = soup.find("div", attrs={"class": "skill skill_w"})
 
@@ -140,6 +162,27 @@ def callWiki(name):
         test = element.text.splitlines()
         champion.w.targetranges = test[2]
 
+    # effect radius
+    elements = wAbilitySection.find_all(
+        class_="pi-item pi-data pi-item-spacing pi-border-color",
+        attrs={"data-source": "effect radius"},
+    )
+    for element in elements:
+        test = element.text.splitlines()
+        champion.w.effectrad = test[2]
+
+    # collision radius
+    elements = wAbilitySection.find_all(
+        class_="pi-item pi-data pi-item-spacing pi-border-color",
+        attrs={"data-source": "collision radius"},
+    )
+    for element in elements:
+        test = element.text.splitlines()
+        champion.w.colrad = test[2]
+
+
+
+    
     # for e ability
     eAbilitySection = soup.find("div", attrs={"class": "skill skill_e"})
     # ranges
@@ -159,6 +202,26 @@ def callWiki(name):
         test = element.text.splitlines()
         champion.e.targetranges = test[2]
 
+    # effect radius
+    elements = eAbilitySection.find_all(
+        class_="pi-item pi-data pi-item-spacing pi-border-color",
+        attrs={"data-source": "effect radius"},
+    )
+    for element in elements:
+        test = element.text.splitlines()
+        champion.e.effectrad = test[2]
+
+    # collision radius
+    elements = eAbilitySection.find_all(
+        class_="pi-item pi-data pi-item-spacing pi-border-color",
+        attrs={"data-source": "collision radius"},
+    )
+    for element in elements:
+        test = element.text.splitlines()
+        champion.e.colrad = test[2]
+
+    
+
     # for r ability
     rAbilitySection = soup.find("div", attrs={"class": "skill skill_r"})
     # ranges
@@ -177,6 +240,24 @@ def callWiki(name):
     for element in elements:
         test = element.text.splitlines()
         champion.r.targetranges = test[2]
+
+    # effect radius
+    elements = rAbilitySection.find_all(
+        class_="pi-item pi-data pi-item-spacing pi-border-color",
+        attrs={"data-source": "effect radius"},
+    )
+    for element in elements:
+        test = element.text.splitlines()
+        champion.r.effectrad = test[2]
+
+    # collision radius
+    elements = rAbilitySection.find_all(
+        class_="pi-item pi-data pi-item-spacing pi-border-color",
+        attrs={"data-source": "collision radius"},
+    )
+    for element in elements:
+        test = element.text.splitlines()
+        champion.r.colrad = test[2]
 
     return champion
 
